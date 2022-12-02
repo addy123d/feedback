@@ -1,0 +1,18 @@
+{
+  "name": "feedback",
+  "version": "1.0.0",
+  "description": "Dawn Vision Labs guest session feedback form",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Dawn Vision Labs",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

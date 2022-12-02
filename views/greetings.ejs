@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <title>Greetings</title>
+    <style type="text/css">
+        body{
+            display: flex;
+            justify-content: center;
+            justify-content: center;
+        }
+   .cert {
+  width: 600px;
+  font-family: arial;
+  color: #383737;
+}
+
+.crt_title {
+  margin-top: 20px;
+  font-family: "Satisfy", cursive;
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: #0060a9;
+}
+.crt_logo img {
+  width: 130px;
+  height: auto;
+  margin: auto;
+  padding: 30px;
+}
+.colorGreen {
+  color: #27ae60;
+}
+.crt_user {
+  display: inline-block;
+  width: 80%;
+  padding: 5px 25px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-family: "Satisfy", cursive;
+  font-size: 40px;
+  border-bottom: 1px dashed #cecece;
+}
+
+.afterName {
+  font-weight: 100;
+  color: #383737;
+}
+.colorGrey {
+  color: grey;
+}
+.certSign {
+  width: 200px;
+}
+
+#copy{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: .7rem;
+    opacity: .5;
+}
+
+@media (max-width: 700px) {
+  .cert {
+    width: 100%;
+  }
+}
+
+    </style>
+  </head>
+  <body id="whole-body">
+
+    <table class="cert">
+      <tr>
+        <td align="center" class="crt_logo">
+          <img src="https://res.cloudinary.com/techyug/image/upload/v1669958034/Untitled_5_y0ofzw.png" alt="logo">
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <h1 class="crt_title" style="font-size: 4rem;">Congratulations !
+            <h1 class="colorGreen crt_user"><%=name%></h1>
+            <h3 class="afterName" style="font-size: .7rem;">For attending live guest session on</h3> 
+
+            <span style="font-size: 1rem; font-weight: bold;">5G enabled IOT systems</span>
+            
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+            <br>
+            <br>
+         <ul style="list-style: none; font-size: .6rem; opacity: 0.5;">
+            <li>dawnvisionlabs@gmail.com</li>
+         </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td align="center">
+          <p id="copy">Copyright @2022 Dawn Vision Labs All rights reserved</p>
+        </td>
+      </tr>
+     
+    </table>
+
+
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    window.addEventListener("load", () => {
+      var element = document.querySelector("#whole-body");
+      var opt = {
+        margin: 1,
+        filename: "greetings.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+      };
+
+      // New Promise-based usage:
+      html2pdf().set(opt).from(element).save();
+
+
+    //   Redirect to google form
+
+    location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd-TIst454R7_eUwwv8uSV5AJbmW0de5T4jHqETxrp364x6Lw/viewform';
+    });
+  </script>
+</html>
